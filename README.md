@@ -6,4 +6,6 @@ Train using `python train.py --dataroot datasets\wojen --name wojen_pix2pix --mo
 
 Generate samples with `python test.py --dataroot datsets\wojen\trainB --name wojen_pix2pix --model test --netG unet_256 --direction BtoA --dataset_mode single --norm batch`
 
+## Adding new training data
+
 To add new data, you must place wojak and face images in their respective directories in .\datasets\wojen\ and make sure they have a corresponding filename (both files named e.g. "420.jpg"). Images must be 360x360. Once you have collected and placed your new images, run `python .\datasets\combine_A_and_B.py --fold_A .\datasets\wojen\A --fold_B .\datasets\wojen\B\ --fold_AB .\datasets\wojen\ --no_multiprocess`
